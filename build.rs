@@ -23,14 +23,6 @@ fn main() {
             let cbc_path = ok_path.split(";").find(|&s| s.contains("Cbc"));
             if let Some(final_path) = cbc_path {
                 println!("cargo:rustc-link-search={}", final_path);
-                println!(
-                    "cargo:include={}",
-                    std::path::Path::new(final_path)
-                        .parent()
-                        .unwrap()
-                        .join("include")
-                        .join("coin").to_str().unwrap()
-                );
             }
         }
         return;
