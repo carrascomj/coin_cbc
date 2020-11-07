@@ -10,6 +10,8 @@ keywords = ["MILP", "MIP", "linear programming"]
 categories = ["api-bindings", "mathematics", "science"]
 license = "MIT "
 readme = "README.md"
+build = "build.rs"
+links = "CbcSover"
 
 [workspace]
 members = ["coin_cbc_sys"]
